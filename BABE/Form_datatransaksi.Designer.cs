@@ -259,6 +259,7 @@ namespace BABE
             // 
             this.bindingNavigator1.AddNewItem = null;
             this.bindingNavigator1.BackgroundImage = global::BABE.Properties.Resources.atasan;
+            this.bindingNavigator1.BindingSource = this.transaksiBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = null;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);

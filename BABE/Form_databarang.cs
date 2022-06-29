@@ -18,6 +18,7 @@ namespace BABE
             InitializeComponent();
         }
 
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-5B0DFV64;Initial Catalog=tkbabe;User ID=sa;Password=Duaribu123");
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -65,16 +66,26 @@ namespace BABE
 
         private void button3_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=LAPTOP-5B0DFV64;Initial Catalog=tkbabe;User ID=sa;Password=Duaribu123");
-            SqlCommand cmd = new SqlCommand("Delete Barang where Id_barang=@Id_barang", con);
+            {
+                SqlCommand cmd = new SqlCommand("Delete Barang where Id_barang=@Id_barang", con);
 
-            con.Open();
+                con.Open();
 
-            cmd.Parameters.AddWithValue("@Id_barang", int.Parse(textBox2.Text));
-            cmd.ExecuteNonQuery();
+                cmd.Parameters.AddWithValue("@Id_barang", int.Parse(textBox2.Text));
+                cmd.ExecuteNonQuery();
 
-            con.Close();
-            MessageBox.Show(" berhasil menghapus ");
+                con.Close();
+                MessageBox.Show(" berhasil menghapus ");
+                Refreshtable();
+            }
+            void Refreshtable()
+            {
+                SqlCommand com = new SqlCommand("Select * From Barang", con);
+                SqlDataAdapter da = new SqlDataAdapter(com);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
         }
     }
 }

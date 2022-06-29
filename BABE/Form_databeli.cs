@@ -18,6 +18,7 @@ namespace BABE
             InitializeComponent();
         }
 
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-5B0DFV64;Initial Catalog=tkbabe;User ID=sa;Password=Duaribu123");
         private void inputPembeliToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -45,16 +46,27 @@ namespace BABE
 
         private void button3_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=LAPTOP-5B0DFV64;Initial Catalog=tkbabe;User ID=sa;Password=Duaribu123");
-            SqlCommand cmd = new SqlCommand(" Delete Beli where Id_belig=@Id_beli", con);
+            {
+                
+                SqlCommand cmd = new SqlCommand(" Delete Beli where Id_beli=@Id_beli", con);
 
-            con.Open();
+                con.Open();
 
-            cmd.Parameters.AddWithValue("@Id_beli", int.Parse(textBox2.Text));
-            cmd.ExecuteNonQuery();
+                cmd.Parameters.AddWithValue("@Id_beli", int.Parse(textBox2.Text));
+                cmd.ExecuteNonQuery();
 
-            con.Close();
-            MessageBox.Show(" berhasil menghapus");
+                con.Close();
+                MessageBox.Show(" berhasil menghapus");
+                Refreshtable();
+            }
+            void Refreshtable()
+            {
+                SqlCommand com = new SqlCommand("Select * From Beli", con);
+                SqlDataAdapter da = new SqlDataAdapter(com);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -69,6 +81,11 @@ namespace BABE
             da.Fill(dt);
 
             dataGridView1.DataSource = dt;
+        }
+
+        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
+        {
+
         }
     }
 }

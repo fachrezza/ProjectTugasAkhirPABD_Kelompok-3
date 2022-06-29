@@ -40,6 +40,9 @@ namespace BABE
 
             con.Close();
             MessageBox.Show(" berhasil menambahkan");
+
+            new Form_datapembeli().Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -58,6 +61,9 @@ namespace BABE
 
             con.Close();
             MessageBox.Show(" berhasil memperbarui");
+
+            new Form_datapembeli().Show();
+            this.Hide();
         }
     }
 }
