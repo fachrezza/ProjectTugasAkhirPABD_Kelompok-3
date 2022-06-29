@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A9325AE4-7DCA-4F36-9B44-5279DD1F65FD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BABE</RootNamespace>
+    <AssemblyName>BABE</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form_databeli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_databeli.Designer.cs">
+      <DependentUpon>Form_databeli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_datatransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_datatransaksi.Designer.cs">
+      <DependentUpon>Form_datatransaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_inputtransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_inputtransaksi.Designer.cs">
+      <DependentUpon>Form_inputtransaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Printreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Printreport.Designer.cs">
+      <DependentUpon>Form_Printreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_utm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_utm.Designer.cs">
+      <DependentUpon>Form_utm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_login.Designer.cs">
+      <DependentUpon>Form_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_menu.Designer.cs">
+      <DependentUpon>Form_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_inputpembeli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_inputpembeli.Designer.cs">
+      <DependentUpon>Form_inputpembeli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_datapembeli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_datapembeli.Designer.cs">
+      <DependentUpon>Form_datapembeli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_inputbarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_inputbarang.Designer.cs">
+      <DependentUpon>Form_inputbarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_databarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_databarang.Designer.cs">
+      <DependentUpon>Form_databarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_inputbeli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_inputbeli.Designer.cs">
+      <DependentUpon>Form_inputbeli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="tkbabeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tkbabeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tkbabeDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tkbabeDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tkbabeDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tkbabeDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tkbabeDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tkbabeDataSet3.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form_databeli.resx">
+      <DependentUpon>Form_databeli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_datatransaksi.resx">
+      <DependentUpon>Form_datatransaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_inputtransaksi.resx">
+      <DependentUpon>Form_inputtransaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Printreport.resx">
+      <DependentUpon>Form_Printreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_utm.resx">
+      <DependentUpon>Form_utm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_login.resx">
+      <DependentUpon>Form_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_menu.resx">
+      <DependentUpon>Form_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_inputpembeli.resx">
+      <DependentUpon>Form_inputpembeli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_datapembeli.resx">
+      <DependentUpon>Form_datapembeli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_inputbarang.resx">
+      <DependentUpon>Form_inputbarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_databarang.resx">
+      <DependentUpon>Form_databarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_inputbeli.resx">
+      <DependentUpon>Form_inputbeli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="tkbabeDataSet.xsc">
+      <DependentUpon>tkbabeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tkbabeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tkbabeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tkbabeDataSet.xss">
+      <DependentUpon>tkbabeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tkbabeDataSet1.xsc">
+      <DependentUpon>tkbabeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="tkbabeDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tkbabeDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tkbabeDataSet1.xss">
+      <DependentUpon>tkbabeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="tkbabeDataSet2.xsc">
+      <DependentUpon>tkbabeDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="tkbabeDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tkbabeDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tkbabeDataSet2.xss">
+      <DependentUpon>tkbabeDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="tkbabeDataSet3.xsc">
+      <DependentUpon>tkbabeDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="tkbabeDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tkbabeDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tkbabeDataSet3.xss">
+      <DependentUpon>tkbabeDataSet3.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gambar12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Babe2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\datap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2022-06-26 at 23.56.40.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\latar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\latar1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atasan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toko.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
